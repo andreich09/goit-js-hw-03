@@ -7,23 +7,13 @@ const products = [
 
 const getAllPropValues = function(arr, prop) {
     // твой код
-    const name = [];
-    const quantity = [];
-    const entries = Object.entries(arr);
-
-    for (const entry of entries) {
-        let values = Object.values(entry[1]);
-        name.push(values[0]);
-        quantity.push(values[2]);
+    let result = [];
+    for (const obj of arr) {
+        if (prop in obj) {
+            result.push(obj[prop]);
+        }
     }
-
-    if (prop === 'name') {
-        return name;
-    } else if (prop === 'quantity') {
-        return quantity;
-    } else {
-        return [];
-    }
+    return result;
 };
 
 /*

@@ -1,7 +1,7 @@
 const countProps = function(obj) {
     // твой код
     const values = Object.values(obj);
-    let totalValue = 0;
+    let totalValue;
     return values.length;
 };
 

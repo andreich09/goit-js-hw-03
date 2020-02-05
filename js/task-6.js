@@ -9,12 +9,12 @@ const calculateTotalPrice = function(allProdcuts, productName) {
     // твой код
     const name = productName;
     let totalPrice = 0;
-    const entries = Object.entries(allProdcuts);
+    // const entries = Object.entries(allProdcuts);
 
-    for (const entry of entries) {
-        let values = Object.values(entry[1]);
-        if (name === values[0]) {
-            totalPrice = values[1] * values[2];
+    for (const product of allProdcuts) {
+        // let values = Object.values(entry[1]);
+        if (productName === product.name) {
+            totalPrice = product.price * product.quantity;
         }
     }
     return totalPrice;
